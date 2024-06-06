@@ -1,0 +1,11 @@
+fastapi~=0.111.0
+uvicorn
+sqlalchemy~=2.0.30
+pydantic~=2.7.3
+alembic
+python-dotenv
+bcrypt
+pyjwt
+cachetools~=5.3.3
+passlib~=1.7.4
+python-jose==3.3.0
