@@ -31,4 +31,7 @@ def delete_post(post_id: int, db: Session = Depends(get_db), current_user: schem
     post = crud.delete_post(db=db, post_id=post_id, user_id=current_user.id)
     if post is None:
         raise HTTPException(status_code=404, detail="Post not found")
+
+    if current_user.id in cache:
+        del cache[current_user.id]
     return post
